@@ -1,0 +1,47 @@
+function download_catalog(catalog_url)
+	catalog = download(catalog_url)
+	return catalog
+
+function merge_catalogs(list_of_catalogs, object_type)
+	final_catalog = array
+	for index, catalog in list_of_catalogs do
+		if object in catalog
+			final_catalog_entry = catalog[index]
+			final_catalog 
+	return final_catalog
+
+function plot_data_for_object(data, object)
+	if object in data then
+		plot(data[object])
+	return plot
+
+function detect_features(feature, plot)
+	if feature in plot
+		return feature
+	else
+		return None
+
+function save_plot(file_name, plot)
+	output = write(plot, file_name)
+	return output
+	
+catalog_1_url = https://astronomy_database.com/stars
+catalog_2_url = https://astronomy_database.com/planets
+catalog_3_url = https://astronomy_database.com/clusters
+
+my_favourite_star = Gamma_Cephei
+my_feature = Gamma_Cephei_AB
+
+stars_catalog = download_catalog(catalog_1_url)
+planets_catalog = download_catalog(catalog_2_url)
+clusters_catalog = download_catalog(catalog_3_url)
+
+catalogs_list = [stars_catalog, planets_catalog, clusters_catalog]
+
+merged_catalogs = merge_catalogs(catalogs_list, my_favourite_star)
+
+my_plot = plot_data_for_object(merge_catalogs, my_favourite_star)
+
+my_planet = detect_features(my_feature, plot)
+
+saved_plot = save_plot("Planet data", my_plot)
